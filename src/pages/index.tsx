@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import { getData } from '@yuri-web-portfolio/firebase/data'
 
 const inter = Inter({ subsets: ['latin'] })
+getData()
 
 export default function Home() {
   return (
