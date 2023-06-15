@@ -1,15 +1,17 @@
-import { firestore } from "./config";
-import { collection, getDocs } from "firebase/firestore";
+import { firestore } from "../firebase/config";
+import { collection, getDocs, DocumentSnapshot } from "firebase/firestore";
 
-// Leer datos de Firestore
-export const getData = async () => {
+export const getData = async (coleccion: string) => {
   try {
-    const collectionRef = collection(firestore, "proyectos");
+    const collectionRef = collection(firestore, coleccion);
     const snapshot = await getDocs(collectionRef);
-    snapshot.forEach((doc) => {
-      console.log("ID:", doc.id, "Datos:", doc.data());
+    const data: any[] = [];
+    snapshot.forEach((doc: DocumentSnapshot) => {
+      data.push(doc.data());
     });
+    return data;
   } catch (error) {
     console.error("Error al obtener datos:", error);
+    return "Error";
   }
 };
