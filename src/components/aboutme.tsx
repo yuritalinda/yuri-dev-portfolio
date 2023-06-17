@@ -5,7 +5,6 @@ type AboutmeItem = {
 };
 
 export default function Aboutme(props: { aboutme: AboutmeItem }) {
-  console.log(props.aboutme);
   return (
     <>
       <section className="relative flex flex-col md:flex-row md:justify-center h-auto">
