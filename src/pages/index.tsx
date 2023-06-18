@@ -25,14 +25,13 @@ export default function Home(props: {
   aboutme: any;
   stack: [];
 }) {
-  console.log(props.stack);
   return (
     <>
       <div className="md:w-3/4 m-auto">
         <Inicio inicio={props.inicio} />
         <Proyectos proyectos={props.proyectos} />
         <Aboutme aboutme={props.aboutme} />
-        <Stack />
+        <Stack stack={props.stack} />
       </div>
     </>
   );

@@ -9,7 +9,7 @@ type ProyectoItem = {
 export default function Proyectos(props: { proyectos: ProyectoItem[] }) {
   return (
     <>
-      <section className="block h-auto relative mb-5">
+      <section className="block h-auto relative mb-5" id="proyectos">
         <h2>pasa el cursor</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {props.proyectos.map((item, index) => (
@@ -23,7 +23,16 @@ export default function Proyectos(props: { proyectos: ProyectoItem[] }) {
                 <div className=" text-white">
                   <h3 className="text-lg font-bold">{item.titulo}</h3>
                   <p>{item.descripcion}</p>
-                  <p>{item.stack.join(" ")}</p>
+                  <div className="flex flex-row">
+                    {item.stack.map((stack, index) => (
+                      <p
+                        key={index}
+                        className="bg-purple-500 m-1 p-2 rounded-full"
+                      >
+                        {stack}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

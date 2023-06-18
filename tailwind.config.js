@@ -10,9 +10,9 @@ module.exports = {
       colors: {
         whitebkg: "#ffff",
         palerose: "#f29199",
-        yellow: "#fcf279",
-        brickred: "#f23235",
-        brown: "#c67e44",
+        yellow: "#F2DE77",
+        brickred: "#FF3636",
+        gold: "#D8A437",
       },
     },
   },
