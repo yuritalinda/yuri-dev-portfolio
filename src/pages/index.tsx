@@ -20,7 +20,7 @@ export async function getServerSideProps() {
 }
 
 export default function Home(props: {
-  inicio: any;
+  inicio?: any;
   proyectos: [];
   aboutme: any;
   stack: [];

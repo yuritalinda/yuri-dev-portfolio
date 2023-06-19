@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { Karla } from "next/font/google";
 
-//TODO: cuando page proyecto este lista revisar como se ve el CSS de las barras y el destacado del menu, debe coincidir con la ruta
+const karla = Karla({
+  subsets: ["latin"],
+  weight: ["500"],
+  variable: "--font-karla",
+});
+//TODO: cuando page proyecto este lista revisar como se ve el CSS de los items y el destacado del menu debe coincidir con la ruta. inicio = destacado inicio
 
 export default function Navmenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +33,9 @@ export default function Navmenu() {
   ];
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav
+        className={`bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 ${karla.variable} font-sans`}
+      >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="" className="flex items-center">
             <img
@@ -36,7 +44,7 @@ export default function Navmenu() {
               alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-palerose dark:text-white">
-              Yuri B
+              Yuri Dev
             </span>
           </a>
           <div className="flex md:order-2">

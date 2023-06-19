@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: { sans: ["var(--font-karla)"] },
       colors: {
         whitebkg: "#ffff",
         palerose: "#f29199",
