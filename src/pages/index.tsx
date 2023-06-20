@@ -25,6 +25,7 @@ export default function Home(props: {
   aboutme: any;
   stack: [];
 }) {
+  console.log(props.proyectos);
   return (
     <>
       <div className="md:w-3/4 m-auto">

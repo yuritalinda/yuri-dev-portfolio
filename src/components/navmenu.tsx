@@ -27,7 +27,7 @@ export default function Navmenu() {
 
   const menuItem = [
     { item: "Inicio", url: "/" },
-    { item: "Proyectos", url: "#proyectos" },
+    { item: "Proyectos", url: "/proyectos" },
     { item: "Acerca de mi", url: "#aboutme" },
     { item: "Contacto", url: "#contacto" },
   ];
