@@ -9,6 +9,7 @@ export async function getServerSideProps() {
   const proyectos = await getData("proyectos");
   const aboutme = await getData("aboutme");
   const stack = await getData("experiencia");
+
   return {
     props: {
       inicio: inicio[0],
@@ -25,7 +26,6 @@ export default function Home(props: {
   aboutme: any;
   stack: [];
 }) {
-  console.log(props.proyectos);
   return (
     <>
       <div className="md:w-3/4 m-auto">

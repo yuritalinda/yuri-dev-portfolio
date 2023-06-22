@@ -2,8 +2,7 @@ import Link from "next/link";
 
 type ProyectoItem = {
   titulo: string;
-  descripcion: string;
-  enlaces: [];
+  id: string;
   stack: [];
   imagen: string;
 };
@@ -33,7 +32,7 @@ export default function ProyectosPage(props: { proyectos: ProyectoItem[] }) {
                     <Link
                       key={index}
                       className=" bg-brickred p-3 mx-1 rounded-lg hover:bg-white hover:text-brickred"
-                      href={`/proyectos/${item.titulo}`}
+                      href={`/proyectos/${item.id}`}
                       target="_self"
                       rel="noopener noreferer"
                     >
