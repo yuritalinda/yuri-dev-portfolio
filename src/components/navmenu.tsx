@@ -40,7 +40,7 @@ export default function Navmenu() {
               className="h-8 mr-3"
               alt="Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-palerose dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-palerose">
               Yuri Dev
             </span>
           </Link>
@@ -74,7 +74,7 @@ export default function Navmenu() {
             id="navbar-sticky"
           >
             {/* to map() menuItem */}
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
               {menuItem.map((item, index) => (
                 <li key={index}>
                   <a
@@ -82,7 +82,7 @@ export default function Navmenu() {
                     className={
                       pathname === item.url
                         ? "block py-2 pl-3 pr-4 text-white bg-gold rounded md:bg-transparent md:text-gold md:p-0 md:dark:text-yellow md:underline md:decoration-4"
-                        : "block py-2 pl-3 pr-4 text-gold hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow md:p-0 md:dark:hover:text-white dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                        : "block py-2 pl-3 pr-4 text-gold hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow md:p-0 md:dark:hover:text-white dark:text-white  dark:hover:text-white md:dark:hover:bg-transparent"
                     }
                     // aria-current="page"
                   >

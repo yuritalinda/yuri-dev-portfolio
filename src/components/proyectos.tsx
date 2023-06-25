@@ -3,7 +3,7 @@ import Link from "next/link";
 type ProyectoItem = {
   titulo: string;
   stack: [];
-  imagen: string;
+  thumbnail: string;
 };
 
 export default function Proyectos(props: { proyectos: ProyectoItem[] }) {
@@ -14,22 +14,22 @@ export default function Proyectos(props: { proyectos: ProyectoItem[] }) {
           Mis Proyectos
         </h2>
         <h3 className="mb-5">
-          haz click en el boton &ldquo;ver mas&rdquo; para ir a la pagina de
-          todos los proyectos que he realizado durante mi carrera.
+          Algunos de mis proyectos personales y profesionales. Haz click en ver
+          más.
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {props.proyectos.slice(3, 6).map((item, index) => (
             <div className="relative " key={index}>
               <img
-                className="h-auto max-w-full rounded-lg"
-                src={item.imagen}
+                className="m-auto rounded-lg"
+                src={item.thumbnail}
                 alt={item.titulo}
               />
-              <div className="absolute inset-0 rounded-lg flex items-center justify-center opacity-0 transition duration-400 ease-in-out hover:opacity-100 bg-neutral-800 p-4 bg-opacity-90">
+              <div className="absolute inset-0 rounded-lg flex items-center justify-center opacity-0 transition duration-400 ease-in-out hover:opacity-100 bg-neutral-800 bg-opacity-90">
                 <div className=" text-white text-center">
                   <h3 className="text-xl font-bold">{item.titulo}</h3>
                   <div className="flex flex-row">
-                    {item.stack.map((stack, index) => (
+                    {item.stack.slice(0, 3).map((stack, index) => (
                       <p
                         key={index}
                         className="bg-white m-1 p-2 rounded-full text-gray-700 text-xs"
