@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import Navmenu from "./navmenu";
 import { Karla } from "next/font/google";
 
@@ -13,8 +14,8 @@ export default function Layout({ children }: any) {
       <Navmenu />
       <div className="w-full 2xl:block 2xl:mx-auto p-5 bg-whitebkg">
         <main className={`${karla.variable} font-sans`}>{children}</main>
-        {/* <Footer /> */}
       </div>
+      <Footer />
     </>
   );
 }
