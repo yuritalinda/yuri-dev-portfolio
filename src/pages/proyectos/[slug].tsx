@@ -8,6 +8,7 @@ type ProyectoItem = {
   imagen: string;
   enlaces: [];
   descripcion: string;
+  desarrollo: string;
 };
 
 export async function getServerSideProps(props: { query: { slug: string } }) {
@@ -69,6 +70,7 @@ export default function ProyectoDetailpage(props: { detail: ProyectoItem }) {
         </div>
         <div className="px-1 mt-12 mx-auto ">
           <p className="">{props.detail.descripcion}</p>
+          <p className="">{props.detail.desarrollo}</p>
         </div>
       </section>
     </>
