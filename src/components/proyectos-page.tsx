@@ -10,7 +10,7 @@ type ProyectoItem = {
 export default function ProyectosPage(props: { proyectos: ProyectoItem[] }) {
   return (
     <>
-      <section className="relative mt-20 h-auto md:h-screen">
+      <section className="relative mt-20 h-auto ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-3/4 m-auto">
           {props.proyectos.map((item, index) => (
             <Link
